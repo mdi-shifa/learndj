@@ -19,6 +19,7 @@ from django.urls import path,include
 
 urlpatterns = [
     #adding calc in main urls file
+    #request searching for the home page
     path('',include('calc.urls')),
     path('admin/', admin.site.urls),
 ]
