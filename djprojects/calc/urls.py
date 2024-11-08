@@ -5,5 +5,6 @@ from . import views
 
 urlpatterns = [ 
     #'' is a call for homepage
-    path('',views.home, name='home')
+    path('',views.home, name='home'),
+    path('add',views.add,name='add')
 ]
