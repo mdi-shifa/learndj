@@ -5,5 +5,5 @@ from . import views
 
 urlpatterns = [ 
     #'' is a call for homepage
-    path('',views.index, name="index")
+    path('',views.index, name="index"),
 ]

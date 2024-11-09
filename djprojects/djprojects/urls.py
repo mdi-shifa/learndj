@@ -27,6 +27,6 @@ from django.urls import path,include
 urlpatterns = [
     #adding index in main urls file
     #request searching for the index page
-    path('travello',include('travello.urls')),
+    path('',include('travello.urls')),
     path('admin/', admin.site.urls),
 ]
