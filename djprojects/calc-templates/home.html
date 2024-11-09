@@ -4,8 +4,9 @@
 {% block content %}
 <h1>hello {{name}}!!!</h1>
 
-<form action="add">
+<form action="add" method="post">
     <!-- form to add two nos -->
+     {% csrf_token %}
     Enter first number: <input type="text" name="num1"><br>
     Enter second number: <input type="text" name="num2"><br>
 
