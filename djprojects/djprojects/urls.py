@@ -17,9 +17,16 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path,include
 
+# urlpatterns = [
+#     #adding calc in main urls file
+#     #request searching for the home page
+#     path('',include('calc.urls')),
+#     path('admin/', admin.site.urls),
+# ]
+
 urlpatterns = [
-    #adding calc in main urls file
-    #request searching for the home page
-    path('',include('calc.urls')),
+    #adding index in main urls file
+    #request searching for the index page
+    path('',include('travello.urls')),
     path('admin/', admin.site.urls),
 ]
