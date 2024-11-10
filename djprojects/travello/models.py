@@ -7,3 +7,4 @@ class destination():
     description: str
     img : str
     price: int
+    offer= bool
