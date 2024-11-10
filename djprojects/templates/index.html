@@ -1,4 +1,5 @@
 {% load static %}
+{% static "images" as baseUrl %} 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -248,11 +249,11 @@
 				<div class="col">
 					<div class="destinations_container item_grid">
 
-						{% for dest in dests%}
+						{% for dest in dests %}
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
-								<img src="{% static 'images/destination_1.jpg' %}" alt="">
+								<img src="{{baseUrl}}/{{dest.img}}" alt="">
 								<div class="spec_offer text-center"><a href=" # ">Special Offer</a></div>
 							</div>
 							<div class="destination_content">
@@ -262,8 +263,10 @@
 							</div>
 						</div>
 
+						{% endfor %}
+
 						<!-- Destination -->
-						<div class="destination item">
+						{% comment %} <div class="destination item">
 							<div class="destination_image">
 								<img src="{% static 'images/destination_2.jpg' %}" alt="">
 							</div>
@@ -272,11 +275,11 @@
 								<div class="destination_subtitle"><p>{{dest.description}}</p></div>
 								<div class="destination_price">From ${{dest.price}}</div>
 							</div>
-						</div>
+						</div> {% endcomment %}
 
 						<!-- Destination -->
 						 
-						<div class="destination item">
+						{% comment %} <div class="destination item">
 							<div class="destination_image">
 								<img src="{% static 'images/destination_3.jpg' %}" alt="">
 							</div>
@@ -285,9 +288,9 @@
 								<div class="destination_subtitle"><p>{{dest.description}}</p></div>
 								<div class="destination_price">From ${{dest.price}}</div>
 							</div>
-						</div>
+						</div> {% endcomment %}
 
-						{% endfor %}
+						 
 						<!-- Destination -->
 						<div class="destination item">
 							<div class="destination_image">
