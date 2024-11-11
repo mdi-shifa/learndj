@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import destination
+
+#this functions are for static data
 # Create your views here.
 # def index(request):
 #     dest1= destination()
@@ -26,5 +28,8 @@ from .models import destination
 #     dests=[dest1,dest2,dest3]
 #     return render(request,"index.html", {'dests': dests} )
      
-     
+#TO FETCH DYNAMIC DATA
+def index(request):
+    dests= destination.objects.all()
+    return render(request, 'index.html', {'dests': dests})
      
